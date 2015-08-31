@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BC5A85D5-9BAC-4527-B5A7-8C9BB427F0B9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>折800</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>135BE5DDC852F5901B1A9BC981A2DD5A9721FBBA</key>
+		<string>https://github.com/renyufei8023/zhe800.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>折800.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>135BE5DDC852F5901B1A9BC981A2DD5A9721FBBA</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/renyufei8023/zhe800.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>135BE5DDC852F5901B1A9BC981A2DD5A9721FBBA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>135BE5DDC852F5901B1A9BC981A2DD5A9721FBBA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>zhe800</string>
+		</dict>
+	</array>
+</dict>
+</plist>

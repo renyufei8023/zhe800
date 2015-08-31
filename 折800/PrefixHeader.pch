@@ -10,8 +10,37 @@
 #define _800_PrefixHeader_pch
 
 #ifdef __OBJC__
-
+#import <BlocksKit/BlocksKit+UIKit.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
+#import "UIImageView+WebCache.h"
+#import <Masonry/Masonry.h>
+#import "RYFNetworkHttpRequestsManges.h"
 
 #endif
+#import "AFHTTPRequestOperationManager.h"
+#import "AFNetworking.h"
+
+#define kVersion_zhe800 [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]
+#define kVersionBuild_zhe800 [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
+
+#ifdef Debug
+#define RYFLog(...) NSLog(__VA_ARGS__)
+#else
+#define RYFLog(...)
+#endif
+
+#define AlertView(_S_, ...)     [[[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:(_S_), ##__VA_ARGS__] delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil] show]
+
+#define KeyWindow [UIApplication sharedApplication].keyWindow
+
+#define ScreenBounds [UIScreen mainScreen].bounds
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define PaddingLeftWidth 15.0
+#define LoginPaddingLeftWidth 18.0
+#define MySegmentControl_Height 44.0
+#define MySegmentControlIcon_Height 70.0
+
 
 #endif

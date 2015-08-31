@@ -21,3 +21,5 @@ pod 'TMCache', '2.1.0'
 pod 'iVersion', '1.11.4'
 pod 'JazzHands', '2.0.0'
 pod 'SSKeychain', '1.2.3'
+pod 'SDWebImage', '~>3.7'
+pod "AFNetworking", "~> 2.0"

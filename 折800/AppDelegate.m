@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "AFNetworking.h"
+#import "AFNetworkActivityIndicatorManager.h"
+#import "EaseStartView.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +20,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    //网络
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+
+    [self.window makeKeyAndVisible];
+    
+    EaseStartView *startView = [EaseStartView startView];
+    
+    [startView startAnimationWithCompletionBlock:^(EaseStartView *easeStartView) {
+    }];
     return YES;
 }
 

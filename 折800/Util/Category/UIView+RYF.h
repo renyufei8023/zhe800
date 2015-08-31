@@ -25,4 +25,7 @@
  *  垂直居中
  */
 - (void)alignVertical;
+
+- (void)addGradientLayerWithColors:(NSArray *)cgColorArray locations:(NSArray *)floatNumArray startPoint:(CGPoint )startPoint endPoint:(CGPoint)endPoint;
+- (CGSize)doubleSizeOfFrame;
 @end

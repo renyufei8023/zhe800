@@ -8,7 +8,8 @@
 
 #import "EaseStartView.h"
 #import <NYXImagesKit/NYXImagesKit.h>
-#import "StartImagesManager.h"
+#import "StartImageManger.h"
+#import "UIView+RYF.h"
 
 @interface EaseStartView ()
 @property (strong, nonatomic) UIImageView *bgImageView, *logoIconView;
@@ -18,19 +19,18 @@
 @implementation EaseStartView
 
 + (instancetype)startView{
-    UIImage *logoIcon = [UIImage imageNamed:@"logo_coding_top"];
     StartImage *st = [[StartImagesManager shareManager] randomImage];
-    return [[self alloc] initWithBgImage:st.image logoIcon:logoIcon descriptionStr:st.descriptionStr];
+    return [[self alloc] initWithBgImage:st.image descriptionStr:st.descriptionStr];
 }
 
-- (instancetype)initWithBgImage:(UIImage *)bgImage logoIcon:(UIImage *)logoIcon descriptionStr:(NSString *)descriptionStr{
-    self = [super initWithFrame:kScreen_Bounds];
+- (instancetype)initWithBgImage:(UIImage *)bgImage descriptionStr:(NSString *)descriptionStr{
+    self = [super initWithFrame:ScreenBounds];
     if (self) {
         //add custom code
         UIColor *blackColor = [UIColor blackColor];
         self.backgroundColor = blackColor;
         
-        _bgImageView = [[UIImageView alloc] initWithFrame:kScreen_Bounds];
+        _bgImageView = [[UIImageView alloc] initWithFrame:ScreenBounds];
         _bgImageView.contentMode = UIViewContentModeScaleAspectFill;
         _bgImageView.alpha = 0.0;
         [self addSubview:_bgImageView];
@@ -54,30 +54,22 @@
             make.left.equalTo(self.mas_left).offset(20);
             make.right.equalTo(self.mas_right).offset(-20);
         }];
-
-        [_logoIconView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self);
-            make.top.mas_equalTo(kScreen_Height/7);
-            make.width.mas_equalTo(kScreen_Width *2/3);
-            make.height.mas_equalTo(kScreen_Width/4 *2/3);
-        }];
         
-        [self configWithBgImage:bgImage logoIcon:logoIcon descriptionStr:descriptionStr];
+        [self configWithBgImage:bgImage descriptionStr:descriptionStr];
     }
     return self;
 }
 
-- (void)configWithBgImage:(UIImage *)bgImage logoIcon:(UIImage *)logoIcon descriptionStr:(NSString *)descriptionStr{
-    bgImage = [bgImage scaleToSize:[_bgImageView doubleSizeOfFrame] usingMode:NYXResizeModeAspectFill];
+- (void)configWithBgImage:(UIImage *)bgImage descriptionStr:(NSString *)descriptionStr{
+    bgImage = [bgImage scaleToSize:_bgImageView.frame.size usingMode:NYXResizeModeAspectFill];
     self.bgImageView.image = bgImage;
-    self.logoIconView.image = logoIcon;
     self.descriptionStrLabel.text = descriptionStr;
     [self updateConstraintsIfNeeded];
 }
 
 - (void)startAnimationWithCompletionBlock:(void(^)(EaseStartView *easeStartView))completionHandler{
-    [kKeyWindow addSubview:self];
-    [kKeyWindow bringSubviewToFront:self];
+    [KeyWindow addSubview:self];
+    [KeyWindow bringSubviewToFront:self];
     _bgImageView.alpha = 0.0;
     _descriptionStrLabel.alpha = 0.0;
 
@@ -89,7 +81,7 @@
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:0.6 delay:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
             @strongify(self);
-            [self setX:-kScreen_Width];
+            [self setX:-ScreenWidth];
         } completion:^(BOOL finished) {
             @strongify(self);
             [self removeFromSuperview];

@@ -10,4 +10,6 @@
 
 @interface NSURL (Comment)
 
++(BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL;
+- (NSDictionary *)queryParams;
 @end

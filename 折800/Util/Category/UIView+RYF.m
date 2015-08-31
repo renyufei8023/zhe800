@@ -102,4 +102,25 @@
 {
     self.y = (self.superview.height - self.height) *0.5;
 }
+
+- (void)addGradientLayerWithColors:(NSArray *)cgColorArray locations:(NSArray *)floatNumArray startPoint:(CGPoint )startPoint endPoint:(CGPoint)endPoint{
+    CAGradientLayer *layer = [CAGradientLayer layer];
+    layer.frame = self.bounds;
+    if (cgColorArray && [cgColorArray count] > 0) {
+        layer.colors = cgColorArray;
+    }else{
+        return;
+    }
+    if (floatNumArray && [floatNumArray count] == [cgColorArray count]) {
+        layer.locations = floatNumArray;
+    }
+    layer.startPoint = startPoint;
+    layer.endPoint = endPoint;
+    [self.layer addSublayer:layer];
+}
+
+- (CGSize)doubleSizeOfFrame{
+    CGSize size = self.frame.size;
+    return CGSizeMake(size.width*2, size.height*2);
+}
 @end
