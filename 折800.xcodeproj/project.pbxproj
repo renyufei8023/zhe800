@@ -26,6 +26,13 @@
 		A3872D0A1B93364F0092D537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3872D081B93364F0092D537 /* Main.storyboard */; };
 		A3872D1B1B9336500092D537 /* _800Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3872D1A1B9336500092D537 /* _800Tests.m */; };
 		A39906CB1B943F58004C8642 /* EaseStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = A39906CA1B943F58004C8642 /* EaseStartView.m */; };
+		A39906DC1B944BC3004C8642 /* BaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39906D91B944BC3004C8642 /* BaseNavgationController.m */; };
+		A39906DD1B944BC3004C8642 /* RootTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39906DB1B944BC3004C8642 /* RootTabViewController.m */; };
+		A39906E31B944D3C004C8642 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39906E21B944D3C004C8642 /* RootViewController.m */; };
+		A39906E71B944DE8004C8642 /* ClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39906E61B944DE8004C8642 /* ClassViewController.m */; };
+		A39906EB1B944E2D004C8642 /* BrandGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39906EA1B944E2D004C8642 /* BrandGroupViewController.m */; };
+		A39906EF1B944E5D004C8642 /* IntegralMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39906EE1B944E5D004C8642 /* IntegralMallViewController.m */; };
+		A39906F31B944E91004C8642 /* PersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39906F21B944E91004C8642 /* PersonalCenterViewController.m */; };
 		F876CBEFAAF6EA8B017B2F32 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C130680596E1C1A05A922E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +81,20 @@
 		A3872D1A1B9336500092D537 /* _800Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _800Tests.m; sourceTree = "<group>"; };
 		A39906C91B943F58004C8642 /* EaseStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseStartView.h; sourceTree = "<group>"; };
 		A39906CA1B943F58004C8642 /* EaseStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseStartView.m; sourceTree = "<group>"; };
+		A39906D81B944BC3004C8642 /* BaseNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavgationController.h; sourceTree = "<group>"; };
+		A39906D91B944BC3004C8642 /* BaseNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavgationController.m; sourceTree = "<group>"; };
+		A39906DA1B944BC3004C8642 /* RootTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabViewController.h; sourceTree = "<group>"; };
+		A39906DB1B944BC3004C8642 /* RootTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabViewController.m; sourceTree = "<group>"; };
+		A39906E11B944D3C004C8642 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		A39906E21B944D3C004C8642 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		A39906E51B944DE8004C8642 /* ClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassViewController.h; sourceTree = "<group>"; };
+		A39906E61B944DE8004C8642 /* ClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassViewController.m; sourceTree = "<group>"; };
+		A39906E91B944E2D004C8642 /* BrandGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrandGroupViewController.h; sourceTree = "<group>"; };
+		A39906EA1B944E2D004C8642 /* BrandGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrandGroupViewController.m; sourceTree = "<group>"; };
+		A39906ED1B944E5D004C8642 /* IntegralMallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralMallViewController.h; sourceTree = "<group>"; };
+		A39906EE1B944E5D004C8642 /* IntegralMallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralMallViewController.m; sourceTree = "<group>"; };
+		A39906F11B944E91004C8642 /* PersonalCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCenterViewController.h; sourceTree = "<group>"; };
+		A39906F21B944E91004C8642 /* PersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterViewController.m; sourceTree = "<group>"; };
 		EC13AA19DAB7F1864E61AAD2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F1C130680596E1C1A05A922E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9CC1AFB1449951ED4DC9FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,13 +170,6 @@
 				A30E23F71B9403E100B940E7 /* font_1.ttf */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		A30E23F81B9403E100B940E7 /* Sections */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sections;
 			sourceTree = "<group>";
 		};
 		A30E23FA1B9403E100B940E7 /* Vendors */ = {
@@ -236,7 +250,7 @@
 				A30E23F01B9403E100B940E7 /* Helpers */,
 				A30E23F11B9403E100B940E7 /* Model */,
 				A30E23F21B9403E100B940E7 /* Resources */,
-				A30E23F81B9403E100B940E7 /* Sections */,
+				A39906D61B944BC3004C8642 /* Section */,
 				A30E24151B94202D00B940E7 /* Util */,
 				A30E23FA1B9403E100B940E7 /* Vendors */,
 				A3872D021B93364F0092D537 /* AppDelegate.h */,
@@ -275,6 +289,75 @@
 				A3872D191B9336500092D537 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A39906D61B944BC3004C8642 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				A39906F01B944E86004C8642 /* PersonalCenterPage */,
+				A39906EC1B944E50004C8642 /* IntegralmallPage */,
+				A39906E81B944E21004C8642 /* BrandgroupPage */,
+				A39906E41B944DC6004C8642 /* classPage */,
+				A39906E01B944D22004C8642 /* rootPage */,
+				A39906D71B944BC3004C8642 /* main */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		A39906D71B944BC3004C8642 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				A39906D81B944BC3004C8642 /* BaseNavgationController.h */,
+				A39906D91B944BC3004C8642 /* BaseNavgationController.m */,
+				A39906DA1B944BC3004C8642 /* RootTabViewController.h */,
+				A39906DB1B944BC3004C8642 /* RootTabViewController.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		A39906E01B944D22004C8642 /* rootPage */ = {
+			isa = PBXGroup;
+			children = (
+				A39906E11B944D3C004C8642 /* RootViewController.h */,
+				A39906E21B944D3C004C8642 /* RootViewController.m */,
+			);
+			path = rootPage;
+			sourceTree = "<group>";
+		};
+		A39906E41B944DC6004C8642 /* classPage */ = {
+			isa = PBXGroup;
+			children = (
+				A39906E51B944DE8004C8642 /* ClassViewController.h */,
+				A39906E61B944DE8004C8642 /* ClassViewController.m */,
+			);
+			path = classPage;
+			sourceTree = "<group>";
+		};
+		A39906E81B944E21004C8642 /* BrandgroupPage */ = {
+			isa = PBXGroup;
+			children = (
+				A39906E91B944E2D004C8642 /* BrandGroupViewController.h */,
+				A39906EA1B944E2D004C8642 /* BrandGroupViewController.m */,
+			);
+			path = BrandgroupPage;
+			sourceTree = "<group>";
+		};
+		A39906EC1B944E50004C8642 /* IntegralmallPage */ = {
+			isa = PBXGroup;
+			children = (
+				A39906ED1B944E5D004C8642 /* IntegralMallViewController.h */,
+				A39906EE1B944E5D004C8642 /* IntegralMallViewController.m */,
+			);
+			path = IntegralmallPage;
+			sourceTree = "<group>";
+		};
+		A39906F01B944E86004C8642 /* PersonalCenterPage */ = {
+			isa = PBXGroup;
+			children = (
+				A39906F11B944E91004C8642 /* PersonalCenterViewController.h */,
+				A39906F21B944E91004C8642 /* PersonalCenterViewController.m */,
+			);
+			path = PersonalCenterPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,16 +499,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39906EF1B944E5D004C8642 /* IntegralMallViewController.m in Sources */,
 				A30E240D1B94054C00B940E7 /* RYFNetworkHttpRequestsManges.m in Sources */,
 				A39906CB1B943F58004C8642 /* EaseStartView.m in Sources */,
+				A39906F31B944E91004C8642 /* PersonalCenterViewController.m in Sources */,
 				A3872D071B93364F0092D537 /* ViewController.m in Sources */,
 				A30E241C1B942FD700B940E7 /* NSObject+Comment.m in Sources */,
 				A30E24221B94358600B940E7 /* UIView+RYF.m in Sources */,
 				A30E240C1B94054C00B940E7 /* LoadingView.m in Sources */,
 				A30E24191B9420B400B940E7 /* NSURL+Comment.m in Sources */,
+				A39906DD1B944BC3004C8642 /* RootTabViewController.m in Sources */,
+				A39906EB1B944E2D004C8642 /* BrandGroupViewController.m in Sources */,
+				A39906E31B944D3C004C8642 /* RootViewController.m in Sources */,
 				A30E24141B941C3900B940E7 /* StartImageManger.m in Sources */,
 				A30E241F1B94357E00B940E7 /* NSString+RYF.m in Sources */,
+				A39906E71B944DE8004C8642 /* ClassViewController.m in Sources */,
 				A3872D041B93364F0092D537 /* AppDelegate.m in Sources */,
+				A39906DC1B944BC3004C8642 /* BaseNavgationController.m in Sources */,
 				A3872D011B93364F0092D537 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +640,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/折800/PrefixHeader.pch";
 				INFOPLIST_FILE = "折800/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -565,6 +656,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/折800/PrefixHeader.pch";
 				INFOPLIST_FILE = "折800/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

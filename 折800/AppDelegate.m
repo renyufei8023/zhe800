@@ -11,6 +11,7 @@
 #import "AFNetworking.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import "EaseStartView.h"
+#import "RootTabViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,14 +25,14 @@
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    //网络
-    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
-    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
-
+    RootTabViewController *rootVC = [RootTabViewController new];
+    rootVC.tabBar.translucent = YES;
+    self.window.rootViewController = rootVC;
+    
     [self.window makeKeyAndVisible];
     
+    @weakify(self);
     EaseStartView *startView = [EaseStartView startView];
-    
     [startView startAnimationWithCompletionBlock:^(EaseStartView *easeStartView) {
     }];
     return YES;

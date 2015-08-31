@@ -23,3 +23,5 @@ pod 'JazzHands', '2.0.0'
 pod 'SSKeychain', '1.2.3'
 pod 'SDWebImage', '~>3.7'
 pod "AFNetworking", "~> 2.0"
+pod 'RDVTabBarController'
+pod 'RKSwipeBetweenViewControllers'

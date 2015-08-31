@@ -30,6 +30,7 @@
 
 + (StartImage *)defautImage;
 - (UIImage *)image;
+- (void)startDownloadImage;
 @end
 
 @interface Group : NSObject

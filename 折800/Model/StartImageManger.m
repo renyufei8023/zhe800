@@ -117,15 +117,18 @@
 }
 
 - (void)refreshImagesPlist{
-    NSString *aPath = @"https://coding.net/api/wallpaper/wallpapers";
+    NSString *aPath = @"api/wallpaper/wallpapers";
     NSDictionary *params = @{@"type" : @"3"};
     [_netWorkManger download:aPath andMethod:RYFRequestMethodGet andParameter:params andPassParameters:nil success:^(id returnData, id passParameters) {
+        id error = [self handleResponse:returnData];
+        if (!error) {
             NSArray *resultA = [returnData valueForKey:@"data"];
             if ([self createFolder:[self downloadPath]]) {
                 if ([resultA writeToFile:[self pathOfSTPlist] atomically:YES]) {
                     [[StartImagesManager shareManager] startDownloadImages];
                 }
             }
+        }
 
     } failure:^(id returnData, NSError *error, id passParameters) {
         
@@ -150,7 +153,11 @@
         }
     }
     
+    for (StartImage *curST in needToDownloadArray) {
+        [curST startDownloadImage];
+    }
 }
+
 
 - (void)saveDisplayImageName:(NSString *)name{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -203,7 +210,20 @@
     return [UIImage imageWithContentsOfFile:self.pathDisk];
 }
 
-@end
+- (void)startDownloadImage{
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    NSURL *URL = [NSURL URLWithString:self.url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+        NSString *pathDisk = [[documentPath stringByAppendingPathComponent:@"Coding_StartImages"] stringByAppendingPathComponent:[response suggestedFilename]];
+        return [NSURL fileURLWithPath:pathDisk];
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        RYFLog(@"downloaded file_path is to: %@", filePath);
+    }];
+    [downloadTask resume];
+}@end
 
 @implementation Group
 
