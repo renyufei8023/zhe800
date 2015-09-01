@@ -31,7 +31,6 @@
     
     [self.window makeKeyAndVisible];
     
-    @weakify(self);
     EaseStartView *startView = [EaseStartView startView];
     [startView startAnimationWithCompletionBlock:^(EaseStartView *easeStartView) {
     }];

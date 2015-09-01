@@ -48,7 +48,7 @@
         [self addSubview:_descriptionStrLabel];
         
         [_descriptionStrLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(@[self, _logoIconView]);
+            make.centerX.equalTo(@[self]);
             make.height.mas_equalTo(10);
             make.bottom.equalTo(self.mas_bottom).offset(-15);
             make.left.equalTo(self.mas_left).offset(20);
@@ -73,17 +73,13 @@
     _bgImageView.alpha = 0.0;
     _descriptionStrLabel.alpha = 0.0;
 
-    @weakify(self);
-    [UIView animateWithDuration:2.0 animations:^{
-        @strongify(self);
+    [UIView animateWithDuration:3.0 animations:^{
         self.bgImageView.alpha = 1.0;
         self.descriptionStrLabel.alpha = 1.0;
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:0.6 delay:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
-            @strongify(self);
             [self setX:-ScreenWidth];
         } completion:^(BOOL finished) {
-            @strongify(self);
             [self removeFromSuperview];
             if (completionHandler) {
                 completionHandler(self);

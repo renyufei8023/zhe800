@@ -30,8 +30,7 @@
 
 - (instancetype)init
 {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         [self createFolder:[self downloadPath]];
         [self loadStartImages];
         _netWorkManger = [RYFNetworkHttpRequestsManges new];
@@ -117,19 +116,15 @@
 }
 
 - (void)refreshImagesPlist{
-    NSString *aPath = @"api/wallpaper/wallpapers";
+    NSString *aPath = @"https://coding.net/api/wallpaper/wallpapers";
     NSDictionary *params = @{@"type" : @"3"};
     [_netWorkManger download:aPath andMethod:RYFRequestMethodGet andParameter:params andPassParameters:nil success:^(id returnData, id passParameters) {
-        id error = [self handleResponse:returnData];
-        if (!error) {
             NSArray *resultA = [returnData valueForKey:@"data"];
             if ([self createFolder:[self downloadPath]]) {
                 if ([resultA writeToFile:[self pathOfSTPlist] atomically:YES]) {
                     [[StartImagesManager shareManager] startDownloadImages];
                 }
             }
-        }
-
     } failure:^(id returnData, NSError *error, id passParameters) {
         
     }];
@@ -137,10 +132,6 @@
 }
 
 - (void)startDownloadImages{
-    
-    if (![AFNetworkReachabilityManager sharedManager].reachableViaWiFi) {
-        return;
-    }
     
     NSArray *plistArray = [NSArray arrayWithContentsOfFile:[self pathOfSTPlist]];
     plistArray = [NSObject arrayFromJSON:plistArray ofObjects:@"StartImage"];
