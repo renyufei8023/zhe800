@@ -20,6 +20,7 @@
 		A30E241C1B942FD700B940E7 /* NSObject+Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = A30E241B1B942FD700B940E7 /* NSObject+Comment.m */; };
 		A30E241F1B94357E00B940E7 /* NSString+RYF.m in Sources */ = {isa = PBXBuildFile; fileRef = A30E241E1B94357E00B940E7 /* NSString+RYF.m */; };
 		A30E24221B94358600B940E7 /* UIView+RYF.m in Sources */ = {isa = PBXBuildFile; fileRef = A30E24211B94358600B940E7 /* UIView+RYF.m */; };
+		A31014BD1B9550170084DC07 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A31014BC1B9550170084DC07 /* BannerView.m */; };
 		A3872D011B93364F0092D537 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3872D001B93364F0092D537 /* main.m */; };
 		A3872D041B93364F0092D537 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3872D031B93364F0092D537 /* AppDelegate.m */; };
 		A3872D071B93364F0092D537 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3872D061B93364F0092D537 /* ViewController.m */; };
@@ -68,6 +69,8 @@
 		A30E241E1B94357E00B940E7 /* NSString+RYF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RYF.m"; sourceTree = "<group>"; };
 		A30E24201B94358600B940E7 /* UIView+RYF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RYF.h"; sourceTree = "<group>"; };
 		A30E24211B94358600B940E7 /* UIView+RYF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RYF.m"; sourceTree = "<group>"; };
+		A31014BB1B9550170084DC07 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
+		A31014BC1B9550170084DC07 /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
 		A3872CFB1B93364F0092D537 /* 折800.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "折800.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3872CFF1B93364F0092D537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3872D001B93364F0092D537 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 			children = (
 				A39906C91B943F58004C8642 /* EaseStartView.h */,
 				A39906CA1B943F58004C8642 /* EaseStartView.m */,
+				A31014BB1B9550170084DC07 /* BannerView.h */,
+				A31014BC1B9550170084DC07 /* BannerView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				A39906F31B944E91004C8642 /* PersonalCenterViewController.m in Sources */,
 				A3872D071B93364F0092D537 /* ViewController.m in Sources */,
 				A30E241C1B942FD700B940E7 /* NSObject+Comment.m in Sources */,
+				A31014BD1B9550170084DC07 /* BannerView.m in Sources */,
 				A30E24221B94358600B940E7 /* UIView+RYF.m in Sources */,
 				A30E240C1B94054C00B940E7 /* LoadingView.m in Sources */,
 				A30E24191B9420B400B940E7 /* NSURL+Comment.m in Sources */,

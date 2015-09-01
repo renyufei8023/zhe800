@@ -59,29 +59,12 @@
         item.selectedTitleAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:13],NSForegroundColorAttributeName: [UIColor colorWithRed:0.9 green:0.22 blue:0.33 alpha:1]};
         item.unselectedTitleAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:13],NSForegroundColorAttributeName:[UIColor colorWithRed:0.36 green:0.39 blue:0.44 alpha:1]};
         [item setBackgroundSelectedImage:backgroundImage withUnselectedImage:backgroundImage];
-        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_btn",
-                                                      [tabBarItemImages objectAtIndex:index]]];
-        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected_btn",
-                                                        [tabBarItemImages objectAtIndex:index]]];
+        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_btn",[tabBarItemImages objectAtIndex:index]]];
+        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected_btn",[tabBarItemImages objectAtIndex:index]]];
         [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
         [item setTitle:[tabBarItemTitles objectAtIndex:index]];
         index++;
     }
-}
-
-- (void)setupChildViewController:(UIViewController *)childVc title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName
-{
-    // 1.设置控制器的属性
-    UILabel *titleLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 0, 30)];
-    titleLab.font = [UIFont systemFontOfSize:14];
-    titleLab.text = title;
-    childVc.navigationItem.titleView = titleLab;
-    // 设置图标
-    
-    // 2.包装一个导航控制器
-    BaseNavgationController *nav = [[BaseNavgationController alloc] initWithRootViewController:childVc];
-    [self addChildViewController:nav];
-
 }
 
 - (BOOL)tabBarController:(RDVTabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
