@@ -28,8 +28,8 @@
     BannerView *bannerView = [[BannerView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 100)];
     bannerView.delegate = self;
     [self.view addSubview:bannerView];
-    bannerView.currentPageIndicatorTintColor = [UIColor redColor];
-    bannerView.pageIndicatorTintColor = [UIColor blackColor];
+    bannerView.currentPageIndicatorTintColor = [UIColor colorWithRed:0.9 green:0.22 blue:0.33 alpha:1];
+    bannerView.pageIndicatorTintColor = [UIColor whiteColor];
     bannerView.pageControlAlignment = PageControlAlignmentCenter;
     [bannerView initWithBanner:imageArray];
 }

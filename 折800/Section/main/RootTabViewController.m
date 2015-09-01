@@ -56,8 +56,8 @@
     for (RDVTabBarItem *item in [[self tabBar] items]) {
         item.titlePositionAdjustment = UIOffsetMake(0, -10);
         item.imagePositionAdjustment = UIOffsetMake(0, 5);
-        item.selectedTitleAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:13],NSForegroundColorAttributeName: [UIColor colorWithRed:0.9 green:0.22 blue:0.33 alpha:1]};
-        item.unselectedTitleAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:13],NSForegroundColorAttributeName:[UIColor colorWithRed:0.36 green:0.39 blue:0.44 alpha:1]};
+        item.selectedTitleAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:12],NSForegroundColorAttributeName: [UIColor colorWithRed:0.9 green:0.22 blue:0.33 alpha:1]};
+        item.unselectedTitleAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:12],NSForegroundColorAttributeName:[UIColor colorWithRed:0.36 green:0.39 blue:0.44 alpha:1]};
         [item setBackgroundSelectedImage:backgroundImage withUnselectedImage:backgroundImage];
         UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_btn",[tabBarItemImages objectAtIndex:index]]];
         UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected_btn",[tabBarItemImages objectAtIndex:index]]];

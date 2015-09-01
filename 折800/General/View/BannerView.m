@@ -140,7 +140,10 @@
     CGPoint offSet = CGPointMake(self.bannerScrollView.contentOffset.x + CGRectGetWidth(self.bannerScrollView.frame), 0);
     [self.bannerScrollView setContentOffset:offSet animated:YES];
 }
-
+- (void)removeTimer{
+    [self.timer invalidate];
+    self.timer = nil;
+}
 
 /*初始化数组*/
 - (void)initWithBanner:(NSArray *)imageArray
@@ -207,5 +210,10 @@
         [self showCurrentImages];
     }
     
+}
+
+- (void)dealloc
+{
+    [self removeTimer];
 }
 @end
